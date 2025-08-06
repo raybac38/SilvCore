@@ -2,22 +2,17 @@
 #define TRANSFORM_COMPONENT_H
 
 #include <stdbool.h>
+#include "utils/vector3.h"
 
 typedef struct {
-    float positionX;
-    float positionY;
-    float positionZ;
+    bool enabled;
 
-    float rotationX;
-    float rotationY;
-    float rotationZ;
-
-    float scaleX;
-    float scaleY;
-    float scaleZ;
+    Vector3 position;
+    Vector3 rotation;
+    Vector3 scale;
 
     bool isStatic;    
-} TransformComponentData;
+} TransformComponent;
 
 
 #endif

@@ -6,6 +6,9 @@
 #include "utils/vector3.h"
 #include "core/entityManager.h"
 
+/// @brief Initialisation of transform system
+void transform_system_init();
+
 /// @brief Add Transform component to an entity
 /// @param entityId entity id
 /// @return succes
