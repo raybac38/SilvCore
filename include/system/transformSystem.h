@@ -9,6 +9,9 @@
 /// @brief Initialisation of transform system
 void transform_system_init();
 
+/// @brief Free all used memorie
+void transform_system_clean();
+
 /// @brief Add Transform component to an entity
 /// @param entityId entity id
 /// @return succes

@@ -8,12 +8,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-TransformComponent * transformComponentArray;
+static TransformComponent * transformComponentArray;
 
 void transform_system_init(){
     transformComponentArray = calloc(sizeof(TransformComponent),  MAX_ENTITY);
     if(transformComponentArray == NULL){
         fprintf(stderr, "Transform systeme wasn't able to init");
+    }
+}
+
+void transform_system_clean(){
+    if(transformComponentArray != NULL){
+        free(transformComponentArray);
+        transformComponentArray = NULL;
     }
 }
 
